@@ -1,0 +1,24 @@
+from selenium.webdriver.firefox.options import Options
+from webdriver_manager.firefox import GeckoDriverManager
+from selenium import webdriver
+
+link = "https://meet.google.com/kyi-xoqb-mux"
+options = Options()
+options.add_argument("-–disable-blink-features")
+options.add_argument("-–disable-notifications")
+options.set_preference("permissions.default.microphone", 2)
+options.set_preference("permissions.default.camera", 2)
+options.set_preference("media.navigator.permission.disabled", True)
+
+options.add_argument(
+    "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36")
+browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
+browser.maximize_window()
+browser.implicitly_wait(7)
+print("Firefox driver initialised successfully")
+browser.get(link)
+print("Firefox driver initialised successfully")
+
+while True:
+    ...
+

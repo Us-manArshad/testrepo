@@ -7,7 +7,7 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 from webdriver_manager.firefox import GeckoDriverManager
 
 ZOOM_MEETING_LINK = "https://aviso.zoom.us/j/84101717055?pwd=PV98Lu0wPAIJWzEycpnIMDWDca9Uw5.1"  # Replace with your Zoom meeting link
-USERNAME = "Aviso Notetaker"
+USERNAME = "Notetaker"
 driver = None
 RUNTIME_AUDIO_DIRECTORY = "runtime_audios"
 
